@@ -28,4 +28,8 @@ app.post('/run-sim', (req, res) => {
   });
 });
 
+app.post('/upload', (req, res) => {
+  // test
+});
+
 app.listen(3000, () => console.log('Server running on http://localhost:3000'));
