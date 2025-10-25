@@ -11,12 +11,25 @@
           http-equiv="X-Content-Security-Policy"
           content="default-src 'self'; script-src 'self'"
         />
+        <title>Performative Matcha Bot</title>
+        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
+        <header>
+            <a href="https://sigrobotics.acm.illinois.edu/"><img src="src/sigrobotics_logo.png" alt="Logo" class="logo"></a>
+        </header>
         <!--
         Need to make a simple "Order Matcha" interface
         Need to communicate with the robot? how?
         -->
+        <div class="input-container">
+            <p id="status">Press the button to start a conversation!</p>
+            <div class="record-class">
+                <button id="recordBtn">🎙️ Ask me for a drink!</button>
+                <p id="status"></p>
+            </div>
+        </div>
+        <script src="script.js"></script>
     </body>
     <footer>
 

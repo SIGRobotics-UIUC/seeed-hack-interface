@@ -1,11 +1,13 @@
-// server/server.js
+// using express due to easy node.js setup
 const express = require('express');
 const { spawn } = require('child_process');
 const path = require('path');
 const app = express();
 
 // Serve the frontend files
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'))); // doesn't feel right
+
+
 
 // Endpoint to trigger the simulation
 app.post('/run-sim', (req, res) => {

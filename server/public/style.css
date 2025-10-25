@@ -1,0 +1,48 @@
+header {
+    position:absolute;
+    top: 20px;
+    left:20px;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #101010;
+    font-family: sans-serif;
+    color: white;
+}
+
+.input-container {
+    text-align: center;
+}
+
+.record-class {
+    background: #1e1e1e;
+    border-radius: 20px;
+    padding: 40px;
+    width: 300px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    margin-top: 20px;
+}
+
+button:hover {
+  background: #2563eb;
+}
+
+button.recording {
+  background: #ef4444;
+}
+
+.logo {
+    height: 100px;     /* adjust size */
+    width: auto;
+    cursor: pointer;
+}
+
+.logo:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
