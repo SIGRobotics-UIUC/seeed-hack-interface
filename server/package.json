@@ -1,0 +1,16 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Hasan Al Saeedi, Aarsh Mittal",
+  "license": "ISC",
+  "type": "commonjs",
+  "description": "Website to interface with the Matcha Bot created during the Seeedstudio Hackathon (10/25-10/26",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
