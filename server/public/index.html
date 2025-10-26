@@ -1,37 +1,75 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-        <meta
-          http-equiv="Content-Security-Policy"
-          content="default-src 'self'; script-src 'self'"
-        />
-        <meta
-          http-equiv="X-Content-Security-Policy"
-          content="default-src 'self'; script-src 'self'"
-        />
-        <title>Performative Matcha Bot</title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-        <header>
-            <a href="https://sigrobotics.acm.illinois.edu/"><img src="src/sigrobotics_logo.png" alt="Logo" class="logo"></a>
-        </header>
-        <!--
-        Need to make a simple "Order Matcha" interface
-        Need to communicate with the robot? how?
-        -->
-        <div class="input-container">
-            <p id="status">Press the button to start a conversation!</p>
-            <div class="record-class">
-                <button id="recordBtn">🎙️ Ask me for a drink!</button>
-                <p id="status"></p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'">
+    <title>Matcha Bot</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="cyber-grid"></div>
+    <div class="particles"></div>
+    
+    <!-- Header -->
+    <header class="cyber-header">
+        <div class="logo-container">
+            <a href="https://sigrobotics.acm.illinois.edu/" class="logo-link">
+                <img src="src/sigrobotics_logo.png" alt="SIGRobotics Logo" class="logo">
+                <div class="logo-glow"></div>
+            </a>
+        </div>
+        <div class="header-title">
+            <h1 class="main-title">MATCHA BOT</h1>
+            <div class="title-underline"></div>
+        </div>
+    </header>
+
+    <!-- Main Interface -->
+    <main class="main-container">
+        <div class="cyber-card">
+            <div class="card-header">
+                <div class="status-indicator">
+                    <div class="pulse-ring"></div>
+                    <div class="status-dot"></div>
+                </div>
+                <h2 class="card-title">VOICE INTERFACE</h2>
+            </div>
+            
+            <div class="status-display">
+                <p id="status" class="status-text">INITIALIZING NEURAL LINK...</p>
+            </div>
+            
+            <div class="control-panel">
+                <button id="recordBtn" class="cyber-button">
+                    <div class="button-content">
+                        <div class="button-icon">🎙️</div>
+                        <span class="button-text">ACTIVATE VOICE CHANNEL</span>
+                    </div>
+                    <div class="button-glow"></div>
+                </button>
+            </div>
+            
+            <div class="visualizer">
+                <div class="wave-container">
+                    <div class="wave wave-1"></div>
+                    <div class="wave wave-2"></div>
+                    <div class="wave wave-3"></div>
+                </div>
             </div>
         </div>
-        <script src="script.js"></script>
-    </body>
-    <footer>
+    </main>
 
+    <!-- Footer -->
+    <footer class="cyber-footer">
+        <div class="footer-content">
+            <p class="footer-text">SIGROBOTICS • MATCHA BOT • v2.0.1</p>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>

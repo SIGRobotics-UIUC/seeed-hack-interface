@@ -12,6 +12,7 @@
   "type": "commonjs",
   "description": "Website to interface with the Matcha Bot created during the Seeedstudio Hackathon (10/25-10/26",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "multer": "^2.0.2"
   }
 }
