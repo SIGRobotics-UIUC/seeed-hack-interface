@@ -12,7 +12,7 @@ record_btn.onclick = async () => {
         mediaRecorder = new MediaRecorder(stream);
         mediaRecorder.ondataavailable = e => chunks.push(e.data);
         mediaRecorder.onstop = () => {
-            const blob = new Blob(chunks, { type: 'audio/webm' });
+            const blob = new Blob(chunks, { type: 'audio/webm' }); //blob is a large binary object
             chunks = [];
             sendToServer(blob);
         };
@@ -31,7 +31,7 @@ record_btn.onclick = async () => {
 
 async function sendToServer(blob) {
   const formData = new FormData();
-  formData.append('audio', blob, 'recording.webm');
+  formData.append('audio-file', blob, 'recording.webm');
   
   const res = await fetch('/upload', {
     method: 'POST',
